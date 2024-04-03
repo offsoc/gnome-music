@@ -258,6 +258,9 @@ class SearchView(Adw.NavigationPage):
         self._album_slice.props.size = 2 * items_per_row
         self._artist_slice.props.size = items_per_row
 
+    def search_headerbar(self):
+        return self._search_headerbar
+
     @Gtk.Template.Callback()
     def _on_album_activated(self, widget, child, user_data=None):
         corealbum = child.props.corealbum

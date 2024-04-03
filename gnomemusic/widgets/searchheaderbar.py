@@ -103,3 +103,7 @@ class SearchHeaderBar(Adw.Bin):
             style_context.add_class("error")
         else:
             style_context.remove_class("error")
+
+    def set_text(self, text):
+        self._entry.set_text(text)
+        self._entry.set_position(len(text))
